@@ -1,0 +1,240 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(multimedia/header/collage.jpg);
+  background-position: center;
+  background-size: fixed;
+  color: #829A8E;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  background-image: url(multimedia/logo/logo.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  color: white;
+  font-size: 40px;
+  line-height: 190px;
+  text-align: center;
+  -webkit-animation-name: cruz;
+          animation-name: cruz;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  font-family: "Playfair Display", serif;
+}
+@-webkit-keyframes cruz {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(-25px);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(50px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(25px);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(-25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes cruz {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(-25px);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(50px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(25px);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(-25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.logo .logo_2 {
+  text-decoration: line-through;
+  color: #829A8E;
+}
+.logo .logo_3 {
+  color: red;
+}
+
+.peliculas {
+  background-color: rgba(3, 84, 84, 0.5);
+  height: auto;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+/*Index inicio*/
+.jumbotronPadre {
+  background-color: rgba(15, 49, 48, 0.9);
+}
+.jumbotronPadre .jumbotron {
+  background-image: url(multimedia/imagen/Morbius.jpeg);
+  background-position: top;
+  background-size: cover;
+  margin-bottom: 0px;
+  font-family: "Playfair Display", serif;
+}
+
+h2 {
+  font-family: "Libre Baskerville", serif;
+}
+
+.indexReseña {
+  padding: 0px 30px 15px 30px;
+  background-color: rgba(15, 49, 48, 0.9);
+  text-align: justify;
+  font-family: "Lato", sans-serif;
+}
+
+.indexListas {
+  font-size: 20px;
+  padding: 30px;
+  text-align: justify;
+  background: linear-gradient(to bottom, rgb(15, 49, 48), #041E1F);
+  font-family: "Lato", sans-serif;
+}
+
+/*inicio map*/
+.btn--lis1 {
+  color: white;
+}
+
+.btn--lis2 {
+  color: antiquewhite;
+}
+
+.btn--lis3 {
+  color: grey;
+}
+
+.btn--lis4 {
+  color: rgb(46, 46, 46);
+}
+
+.btn--lis5 {
+  color: black;
+}
+
+/*fin map*/
+.indexMorbicancion_tabla, .multimediaEscenas {
+  background-color: #041E1F;
+  font-family: "Lato", sans-serif;
+}
+.indexMorbicancion_tabla .morbicancion, .multimediaEscenas .morbicancion {
+  height: 350px;
+  overflow: auto;
+}
+
+/*Index fin*/
+/*Multimedia inicio*/
+.multimediaCarrusel {
+  background-color: rgba(3, 84, 84, 0.5);
+  text-align: center;
+  display: grid;
+  justify-content: center;
+}
+
+.multimediaEscenas {
+  text-align: center;
+}
+.multimediaEscenas img:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.multimediaReparto {
+  text-align: center;
+  background-color: rgba(15, 49, 48, 0.9);
+}
+.multimediaReparto img:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.multimediaVideo {
+  text-align: center;
+  background-color: rgb(15, 49, 48);
+  display: grid;
+  justify-content: center;
+  padding: 10px;
+}
+.multimediaVideo iframe {
+  height: 350px;
+}
+
+/*Multimedia fin*/
+/*Noticias inicio*/
+.noticias {
+  text-align: center;
+}
+.noticias .noticia1 {
+  background-color: #044140;
+}
+.noticias .noticia2 {
+  background-color: #0F3130;
+}
+.noticias .noticia3 {
+  background-color: #01282A;
+}
+.noticias .noticia4 {
+  background-color: #041E1F;
+}
+
+/*Noticias fin*/
+/*Quienes somos inicio*/
+.quienesSomos {
+  background-color: rgb(15, 49, 48);
+  padding-left: 50px;
+}
+.quienesSomos .quienesSomos_directiva {
+  background-color: rgba(3, 84, 84, 0.5);
+  padding: 10px;
+}
+.quienesSomos .quienesSomos_dondenosencontramos {
+  padding: 10px;
+}
+
+/*Quienes somos fin*/
+/*Contacto inicio*/
+.contacto_formulario {
+  background-image: url(./multimedia/imagen/morbiusright.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+/*Contacto fin*/
+footer {
+  letter-spacing: 2px;
+}/*# sourceMappingURL=estilos.css.map */

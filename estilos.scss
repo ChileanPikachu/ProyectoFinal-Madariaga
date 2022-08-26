@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+$font1: 'Playfair Display', serif;
+$font2: 'Libre Baskerville', serif;
+$font3: 'Lato', sans-serif;
+
+$color1: #829A8E;
+$color2: white;
+$color3: red;
+
+$colorb1: rgba(3, 84, 84, 0.5);
+$colorb2: rgba(15, 49, 48, 0.9);
+$colorb3: rgb(15, 49, 48);
+$colorb4: #041E1F;
+
+$imagen1: url(multimedia/logo/logo.jpg);
+$imagen2: url(multimedia/imagen/Morbius.jpeg);
+$imagen3: url(multimedia/header/collage.jpg);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: $imagen3;
+    background-position: center;
+    background-size: fixed;
+    color: $color1;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+    background-image: $imagen1;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    color: $color2;
+    font-size: 40px;
+    line-height: 190px;
+    text-align: center;
+    animation-name: cruz;
+    animation-duration: 10s;
+    font-family: $font1;
+
+    @keyframes cruz {
+        0% {
+            opacity: 0;
+        }
+
+        20% {
+            opacity: 1;
+            transform: translateY(-25px);
+        }
+
+        40% {
+            opacity: 1;
+            transform: translateY(50px);
+        }
+
+        60% {
+            opacity: 1;
+            transform: translateX(25px);
+        }
+
+        80% {
+            opacity: 1;
+            transform: translateX(-25px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+
+    }
+
+    .logo_2 {
+        text-decoration: line-through;
+        color: $color1;
+    }
+
+    .logo_3 {
+        color: $color3;
+    }
+}
+
+.peliculas {
+    background-color: $colorb1;
+    height: auto;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+/*Index inicio*/
+.jumbotronPadre {
+    background-color: $colorb2;
+
+
+    .jumbotron {
+        background-image: $imagen2;
+        background-position: top;
+        background-size: cover;
+        margin-bottom: 0px;
+        font-family: $font1;
+    }
+}
+
+h2 {
+    font-family: $font2;
+}
+
+.indexReseña {
+    padding: 0px 30px 15px 30px;
+    background-color: $colorb2;
+    text-align: justify;
+    font-family: $font3;
+}
+
+.indexListas {
+    font-size: 20px;
+    padding: 30px;
+    text-align: justify;
+    background: linear-gradient(to bottom, $colorb3, $colorb4);
+    font-family: $font3;
+}
+
+/*inicio map*/
+$listas: (
+    lis1: white,
+    lis2: antiquewhite,
+    lis3: grey,
+    lis4: rgb(46, 46, 46),
+    lis5: black
+);
+
+@each $lis1,
+$font in $listas {
+    .btn--#{$lis1} {
+        color: $font;
+    }
+}
+
+/*fin map*/
+
+.indexMorbicancion_tabla {
+    background-color: $colorb4;
+    font-family: $font3;
+
+
+    .morbicancion {
+        height: 350px;
+        overflow: auto;
+    }
+}
+
+/*Index fin*/
+
+/*Multimedia inicio*/
+.multimediaCarrusel {
+    background-color: $colorb1;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+}
+
+.multimediaEscenas {
+    @extend .indexMorbicancion_tabla;
+    text-align: center;
+
+    img:hover {
+        transform: scale(1.2, 1.2);
+    }
+}
+
+@mixin sizes($textalign, $bcolor) {
+    text-align: $textalign;
+    background-color: $bcolor;
+}
+
+.multimediaReparto {
+    @include sizes(center, $colorb2);
+
+    img:hover {
+        transform: scale(1.2, 1.2);
+    }
+}
+
+.multimediaVideo {
+    @include sizes(center, $colorb3);
+    display: grid;
+    justify-content: center;
+    padding: 10px;
+
+    iframe {
+        height: 350px;
+    }
+}
+
+/*Multimedia fin*/
+
+/*Noticias inicio*/
+.noticias {
+    text-align: center;
+
+    .noticia1 {
+        background-color: #044140;
+    }
+
+    .noticia2 {
+        background-color: #0F3130;
+    }
+
+    .noticia3 {
+        background-color: #01282A;
+    }
+
+    .noticia4 {
+        background-color: #041E1F;
+    }
+}
+
+/*Noticias fin*/
+
+/*Quienes somos inicio*/
+.quienesSomos {
+    background-color: $colorb3;
+    padding-left: 50px;
+
+    .quienesSomos_directiva {
+        background-color: $colorb1;
+        padding: 10px;
+    }
+
+    .quienesSomos_dondenosencontramos {
+        padding: 10px;
+    }
+}
+
+/*Quienes somos fin*/
+
+/*Contacto inicio*/
+.contacto_formulario {
+    background-image: url(./multimedia/imagen/morbiusright.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/*Contacto fin*/
+
+footer {
+    letter-spacing: 2px;
+}
