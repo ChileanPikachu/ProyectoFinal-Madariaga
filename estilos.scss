@@ -32,6 +32,26 @@ body {
     color: $color1;
 }
 
+/*barra scroll inicio*/
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px $colorb3;
+    border-radius: 10px;
+    background-color: $colorb4;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+    background-color: $colorb3;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: $colorb1;
+}
+
+/*barra scroll fin*/
+
 .logo {
     width: 200px;
     height: 200px;
